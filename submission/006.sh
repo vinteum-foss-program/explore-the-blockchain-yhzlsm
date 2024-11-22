@@ -30,32 +30,4 @@ txid_filtered=$(echo "$block_info_spender" | jq -r --arg coinbase_txid "$coinbas
 
 # Show in the terminal
 echo "$txid_filtered"
-
-
-
-
-
-
-
-
-# coinbase_transaction = get_block_info "$BLOCK_HEIGHT_COINBASE"
-
-
-# function get_coin_base_transaction() {
-#     for transaction in $transactions; do
-#         raw_transaction_data=$(bitcoin-cli getrawtransaction "$transaction" 1)
-#         #Get the length (vout) of each transaction
-#         coinbase_transaction=$(echo "$raw_transaction_data" | jq 'select(.vin[]?.coinbase)')
-
-#         if [[ -n "$coinbase_transaction" ]]; then
-#             echo "Coinbase transaction found:"
-#             echo "$coinbase_transaction"
-#             break
-#         fi
-#     done
-# }
-
-
-
-
    
